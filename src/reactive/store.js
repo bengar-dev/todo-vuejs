@@ -13,6 +13,9 @@ export const store = createStore({
         },
         deleteTodo (state, payload) {
             state.listArray.splice(payload.index, 1)
+        },
+        editTodo (state, payload) {
+            state.listArray[payload.index] = payload.value
         }
     }
 })
